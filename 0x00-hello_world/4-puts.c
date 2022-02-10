@@ -1,7 +1,11 @@
 #include <stdio.h>
-int Betty(void)
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-	char p= "\"Programming is like building a multilingual puzzle";
-	puts(p);
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
