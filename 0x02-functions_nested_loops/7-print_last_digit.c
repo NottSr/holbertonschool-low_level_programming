@@ -7,22 +7,24 @@
  */
 int print_last_digit(int a)
 {
-	int cn = '0';
+	int cn = 0;
 
-	if (a > '0')
+	if (a > 0)
 	{
 		a = a % 10;
 		_putchar('0' + a);
+		return (a);
 	}
-	else if (a < '0')
+	else if (a < 0)
 	{
 		cn = a * -1;
 		a = cn % 10;
 		_putchar('0' + a);
+		return (a);
 	}
 	else
 	{
 		_putchar('0' + a);
+		return (a);
 	}
-	return (a);
 }
