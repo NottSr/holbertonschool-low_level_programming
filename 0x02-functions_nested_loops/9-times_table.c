@@ -8,9 +8,9 @@ void times_table(void)
 {
 	int i = 0, k = 0;
 
-	while (i < 10)
+	while (i <= 9)
 	{
-	       int j = 0;
+		int j = 0;
 
 		while (j < 10)
 		{
@@ -19,7 +19,7 @@ void times_table(void)
 			{
 				_putchar('0' + k);
 			}
-			else 
+			else
 			{
 				if (k < 10)
 				{
