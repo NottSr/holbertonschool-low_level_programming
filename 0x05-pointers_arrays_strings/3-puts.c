@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _puts - Entry point
- *
+ * @str: variable with pointer value
  * Return: Always str (Success)
  */
 void _puts(char *str)
