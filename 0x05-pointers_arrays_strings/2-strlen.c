@@ -2,7 +2,7 @@
 /**
  * _strlen - Entry point
  * @s: string checked
- * Return: Always @count (Success)
+ * Return: Always i (Success)
  */
 int _strlen(char *s)
 {
