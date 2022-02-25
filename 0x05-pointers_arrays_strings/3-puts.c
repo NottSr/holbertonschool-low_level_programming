@@ -2,7 +2,7 @@
 /**
  * _puts - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always str (Success)
  */
 void _puts(char *str)
 {
