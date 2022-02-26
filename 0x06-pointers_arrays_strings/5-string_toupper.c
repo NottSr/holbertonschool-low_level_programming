@@ -10,7 +10,7 @@ char *string_toupper(char *p)
 
 	while (p[i])
 	{
-		if (p[i] >= 'a' && p[i] <= 'z') /*All lowercase characters ASCII value is from 97 to 122*/
+		if (p[i] >= 'a' && p[i] <= 'z') /*lower chars ASCII value is from 97 to 122*/
 		{
 			p[i] = p[i] - 32; /*So we substract 32 to convert lower to upper*/
 		}
