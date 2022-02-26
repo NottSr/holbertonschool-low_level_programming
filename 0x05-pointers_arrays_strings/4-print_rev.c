@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_rev - Entry point
- * @s: variable with string checked 
+ * @s: variable with string checked
  * Return: Always s (Success)
  */
 void print_rev(char *s)
