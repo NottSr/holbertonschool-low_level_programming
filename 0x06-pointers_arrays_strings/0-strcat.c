@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * _strcat - Entry point
+ * @dest: first variable checked
+ * @src: sec variable checked
+ * Return: Always dest (Success)
+ */
 char *_strcat(char *dest, char *src)
 {
 	int i = 0, dlen;
@@ -16,5 +21,5 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 	dest[dlen + i] = '\0';
-	return dest;
+	return (dest);
 }
