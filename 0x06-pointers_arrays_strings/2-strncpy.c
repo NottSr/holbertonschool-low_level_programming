@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - Entry point
+ * _strncpy - Entry point
  * @dest: first variable checked
  * @src: sec variable checked
  * @n: number of bytes
