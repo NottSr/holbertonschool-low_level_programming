@@ -21,11 +21,9 @@ char *rot13(char *s)
 				s[i] = n[j];
 				aux = 1;
 			}
-			{
-				aux = 0;
-			}
 			j++;
 		}
+		aux = 0;
 		i++;
 	}
 	return (s);
