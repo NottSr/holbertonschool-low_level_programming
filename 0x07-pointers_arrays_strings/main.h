@@ -13,3 +13,5 @@ void set_string(char **s, char *to);
 unsigned int _strspn(char *s, char *accept);
 
 void print_diagsums(int *a, int size);
+
+unsigned int _strspn(char *s, char *accept);
