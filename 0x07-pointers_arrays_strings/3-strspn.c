@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * _strspn - Entry point
+ * @s: pointer with string to check
+ * @accept: pointer with chars to check
+ * Return: Always len (Success)
+ */
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, j = 0;
