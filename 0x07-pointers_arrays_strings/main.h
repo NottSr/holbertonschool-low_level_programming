@@ -15,3 +15,5 @@ unsigned int _strspn(char *s, char *accept);
 void print_diagsums(int *a, int size);
 
 unsigned int _strspn(char *s, char *accept);
+
+char *_strpbrk(char *s, char *accept);
