@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * factorial - Entry point
+ * @n: int checked
+ * Return: (Success)
+ */
 int factorial(int n)
 {
 	if (n == 0)
