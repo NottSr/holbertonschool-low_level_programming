@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * odd_count - Entry point
+ * sqrt_count - Entry point
  * @i: int checked
  * @j: int checked to multiply
  * Return: (Success)
@@ -18,7 +18,7 @@ int sqrt_count(int i, int j)
 	return (sqrt_count(i, j + 1));
 }
 /**
- * sqrt_recursion - Entry point
+ * _sqrt_recursion - Entry point
  * @n: int checked
  * Return: (Success)
  */
