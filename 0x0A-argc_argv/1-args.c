@@ -4,7 +4,8 @@
 #define UNUSED(x) (void)(x)
 /**
  * main - Entry point
- * @argc: number
+ * @argc: number of strings on line code
+ * @argv: string on line code
  * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
