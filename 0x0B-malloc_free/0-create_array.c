@@ -22,5 +22,6 @@ char *create_array(unsigned int size, char c)
 		*(ar + i) = c; /*while i less than size, assign c to ar plus i*/
 		i++;
 	}
+	*(ar + i) = '\0';
 	return (ar);
 }
