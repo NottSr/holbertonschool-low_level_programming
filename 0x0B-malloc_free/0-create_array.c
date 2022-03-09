@@ -17,6 +17,10 @@ char *create_array(unsigned int size, char c)
 		return (NULL); /*if array is equal to 0*/
 	}
 	ar = malloc(sizeof(*ar) * size); /*asign the size plus one*/
+	if (ar == NULL)
+	{
+		return (NULL);
+	}
 	while (i < size)
 	{
 		*(ar + i) = c; /*while i less than size, assign c to ar plus i*/
