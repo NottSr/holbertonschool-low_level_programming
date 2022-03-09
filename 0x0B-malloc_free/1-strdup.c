@@ -15,16 +15,16 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	
+
 	while (*(str + i))
 	{
 		i++;
 	}
-	
+
 	len = i + 1;
 	i = 0;
 	dstr = malloc(sizeof(*str) * len);
-	
+
 	if (dstr == NULL)
 	{
 		return (NULL);
@@ -32,7 +32,7 @@ char *_strdup(char *str)
 
 	while (i < len)
 	{
-		*(dstr + i) = *(str + i); /*while i less than size, assign str + i to dstr + i*/
+		*(dstr + i) = *(str + i); /*while i less than size, assign str + i*/
 		i++;
 	}
 	return (dstr);
