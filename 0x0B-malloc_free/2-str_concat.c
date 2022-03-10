@@ -12,14 +12,6 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, j = 0, size = 0, dlen_s1 = 0, dlen_s2 = 0;
 	char *s3;
 
-	if (s2 == NULL)
-	{
-		return (s1);
-	}
-	if (s1 == NULL)
-	{
-		return (s2);
-	}
 	dlen_s1 = _counter(s1, i);
 	dlen_s2 = _counter(s2, i);
 	size = dlen_s1 + dlen_s2 + 1;
@@ -29,18 +21,17 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	while (i <= size)
+	while (i < dlen_s1)
 	{
-		if (i < dlen_s1)
-		{
-			*(s3 + i) = s1[i];
-		}
-		else if (i >= dlen_s1)
-		{
-			*(s3 + i) = s2[j];
-			j++;
-		}
+		*(s3 + i) = *(s1 + i);
 		i++;
+	}
+
+	while (j < dlen_s2)
+	{
+		*(s3 + i) = *(s2 + j);
+		i++;
+		j++;
 	}
 	*(s3 + (size + 1)) = '\0';
 	return (s3);
