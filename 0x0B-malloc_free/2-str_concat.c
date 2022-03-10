@@ -20,13 +20,21 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
+	if (s1 == NULL && s2 != NULL)
+	{
+		return (s2);
+	}
+	if (s2 == NULL && s1 != NULL)
+	{
+		return (s1);
+	}
 	while (i <= size)
 	{
 		if (i < dlen_s1)
 		{
 			*(s3 + i) = s1[i];
 		}
-		else
+		else if (i >= dlen_s1)
 		{
 			*(s3 + i) = s2[j];
 			j++;
