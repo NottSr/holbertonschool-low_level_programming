@@ -12,6 +12,14 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, j = 0, size = 0, dlen_s1 = 0, dlen_s2 = 0;
 	char *s3;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	dlen_s1 = _counter(s1, i);
 	dlen_s2 = _counter(s2, i);
 	size = dlen_s1 + dlen_s2 + 1;
