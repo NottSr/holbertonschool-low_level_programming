@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
 /**
@@ -10,7 +9,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, dlen_s1 = 0, dlen_s2 = 0;
+	unsigned int i = 0, j = 0, ls1 = 0, ls2 = 0, ls3 = 0;
 	char *s3;
 
 	if (s1 == NULL)
@@ -21,19 +20,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	dlen_s1 = _counter(s1, i);
-	dlen_s2 = _counter(s2, i);
-	if (n > dlen_s2)
+	ls1 = _counter(s1, i);
+	ls2 = _counter(s2, i);
+	if (n > ls2)
 	{
-		n = dlen_s2;
+		n = ls2;
 	}
-	s3 = malloc(dlen_s1 + (n + 1)); /*asign the size*/
+	ls3 = ls1 + n;
+	s3 = malloc(ls3 + 1); /*asign the size*/
 	if (s3 == NULL)
 	{
 		return (NULL);
 	}
 
-	while (i < dlen_s1)
+	while (i < ls1)
 	{
 		*(s3 + i) = *(s1 + i);
 		i++;
@@ -45,7 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 		j++;
 	}
-	*(s3 + (dlen_s1 + (n + 1)) = '\0';
+	*(s3 + i) = '\0';
 	return (s3);
 }
 
