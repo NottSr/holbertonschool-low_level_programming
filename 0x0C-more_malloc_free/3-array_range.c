@@ -28,6 +28,5 @@ int *array_range(int min, int max)
 		*(ar + i) = min + i;
 		i++;
 	}
-	*(ar + i) = '\0';
 	return (ar);
 }
