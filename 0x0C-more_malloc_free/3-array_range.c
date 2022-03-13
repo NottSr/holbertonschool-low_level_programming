@@ -14,7 +14,7 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	while (max > (min + size))
+	while (max >= (min + size))
 	{
 		size++;
 	}
