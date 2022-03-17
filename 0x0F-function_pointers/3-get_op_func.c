@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "calc.h"
+#include "3-calc.h"
 /**
  * get_op_func - ptr to a function
  * @s: operatos passed as argument
@@ -18,11 +18,11 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (ops[i] != 0)
+	while (*(ops[i]).op != '\0')
 	{
 		if (ops->op == s)
 		{
-			return (ops[i]);
+			return (ops[i].f);
 		}
 		i++;
 	}

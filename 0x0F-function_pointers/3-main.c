@@ -1,15 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "calc.h"
+#include "3-calc.h"
+#define UNUSED(x) (void)(x)
 /**
- * op_add - sum of a and b
- * @a: first int
- * @b: second int
- * Return: a + b (Success)
+ * main - Entry point
+ * @argc: number of elemets (UNUSED)
+ * @argv: elements checked
+ * Return: 0 (Success)
  */
-int main(char *argv[])
+int main(int argc, char *argv[])
 {
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
+	UNUSED(argc);
 
+	printf("%d", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+	return (0);
 }
