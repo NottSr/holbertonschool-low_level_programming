@@ -1,17 +1,29 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "3-calc.h"
-#define UNUSED(x) (void)(x)
 /**
  * main - Entry point
- * @argc: number of elemets (UNUSED)
+ * @argc: number of elemets
  * @argv: elements checked
  * Return: 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	UNUSED(argc);
+	int (*opr)(int, int);
 
-	printf("%d", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	opr = get_op_func(argv[2]);
+	if (opr == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	
+	printf("%d\n", opr(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
