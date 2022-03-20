@@ -9,7 +9,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, j;
+	unsigned int i = 0, j = 0;
 	char *separator = "";
 	va_list pall;
 	get_ty get_type[] = {
