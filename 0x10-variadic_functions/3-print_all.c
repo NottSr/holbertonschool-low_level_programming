@@ -79,9 +79,7 @@ void pr_str(char *separator, va_list pall)
 	if (str == NULL)
 	{
 		printf("%s%s", separator, "(nil)");
+		return;
 	}
-	else
-	{
-		printf("%s%s", separator, str);
-	}
+	printf("%s%s", separator, str);
 }
