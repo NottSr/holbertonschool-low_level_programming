@@ -54,7 +54,7 @@ void pr_char(char *separator, va_list pall)
  */
 void pr_int(char *separator, va_list pall)
 {
-	printf("%s%d", separator, va_arg(pall, int));
+	printf("%s%i", separator, va_arg(pall, int));
 }
 /**
  * pr_float - print float var
