@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 		{"s", pr_str}
 	};
 	va_start(pall, format);
-	while (format[i] != '\0' && format != NULL)
+	while (format[i] && format != NULL)
 	{
 		j = 0;
 		while (j <= 3)
