@@ -12,11 +12,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int aux = 0, fbits = 0;
 
 	aux = n ^ m;
-	while (aux)
+	while (aux > 0)
 	{
-		if (aux & 1)
-			fbits++;
-
+		fbits += (aux & 1);
 		aux >>= 1;
 	}
 	return (fbits);
