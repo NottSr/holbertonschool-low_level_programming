@@ -6,10 +6,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * append_text_to_file - append text to a file
- * @filename: file's name
- * @text_content: text content to append
- * Return: 1 or -1
+ * main - Entry point
+ * @argc: number of files
+ * @av: files checked
+ * Return: 0 or -1
  */
 int main(int argc, char *av[])
 {
@@ -21,28 +21,24 @@ int main(int argc, char *av[])
 
 	f1 = open(av[1], O_RDONLY);
 	if (f1 < 0)
-		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n"), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
 	f2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 00664);
 	if (f2 < 0)
-		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n"), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 
-	while((r1 = read(f1, buf, 1024)) > 0)
+	while ((r1 = read(f1, buf, 1024)) > 0)
 	{
 		w2 = write(f2, buf, r1);
 		if (w2 < 0)
-			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n"), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 
-	if(r1 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n"), exit(98);
-	}
+	if (r1 == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
-	if(close(f1) == -1 || close(f2) == -1)
-	{
+	if (close(f1) == -1 || close(f2) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n"), exit(100);
-	}
 
 	return (0);
 }
