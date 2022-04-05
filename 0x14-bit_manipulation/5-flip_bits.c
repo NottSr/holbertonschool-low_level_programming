@@ -4,8 +4,8 @@
 /**
  * flip_bits - flip bits asked
  * @n: number checked
- * @index: index
- * Return: Always 0.
+ * @m: 2nd number checked
+ * Return: Always fbits
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
