@@ -4,4 +4,8 @@
  * @s: string
  * Return: (Success)
  */
-int _atoi(char *s);
+int _atoi(char *s)
+{
+	s = s + 1;
+	return (0);
+}
