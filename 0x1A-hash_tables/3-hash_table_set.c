@@ -14,10 +14,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *temp = NULL;
 	unsigned int index = 0;
 
-	if (!ht || !key || !*key)
+	if (!ht || !key || !*key || !value)
 		return (0);
 
-	index = key_index((const unsigned char *)value, ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 	temp = ht->array[index];
 
 	while (temp != NULL)
