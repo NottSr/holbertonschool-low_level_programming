@@ -39,7 +39,7 @@ int binary_search(int *array, size_t size, int value)
 	size_t inf = 0, sup = size - 1;
 	int cen;
 
-	if (!array || !value || !size)
+	if (!array || !value || !size || size <= 0)
 		return (-1);
 
 	while (inf <= sup)
