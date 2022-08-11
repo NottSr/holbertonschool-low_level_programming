@@ -45,7 +45,7 @@ int binary_search(int *array, size_t size, int value)
 	{
 		print_array(inf, sup);
 
-		cen = (sup + inf) / 2;
+		cen = ((sup - inf) / 2) + inf;
 
 		if (value == array[cen])
 			return (cen);
