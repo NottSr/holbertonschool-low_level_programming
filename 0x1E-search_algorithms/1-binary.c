@@ -15,7 +15,7 @@ void print_array(size_t inf, size_t sup)
 
 	while (i <= sup)
 	{
-		if (i != inf)
+		if (i < sup)
 			printf("%ld, ", i);
 		else
 			printf("%ld", i);
