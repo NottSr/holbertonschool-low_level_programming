@@ -36,8 +36,7 @@ void print_array(size_t inf, size_t sup)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t inf = 0, sup = size - 1;
-	int cen = 0;
+	size_t inf = 0, cen = 0, sup = size - 1;
 
 	if (!array)
 		return (-1);
