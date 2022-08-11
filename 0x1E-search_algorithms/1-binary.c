@@ -15,7 +15,7 @@ void print_array(size_t inf, size_t sup)
 
 	while (i <= sup)
 	{
-		if (i < sup)
+		if (i != inf)
 			printf("%ld, ", i);
 		else
 			printf("%ld", i);
@@ -45,7 +45,7 @@ int binary_search(int *array, size_t size, int value)
 	{
 		print_array(inf, sup);
 
-		cen = ((sup - inf) / 2) + inf;
+		cen = (sup + inf) / 2;
 
 		if (value == array[cen])
 			return (cen);
